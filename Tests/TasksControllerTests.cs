@@ -14,13 +14,15 @@ namespace TaskTrackerAPI.Tests
     public class TasksControllerTests
     {
         private Mock<ITaskRepository> _mockTaskRepository;
+        private Mock<ILogger<TasksController>> _mockTaskLogger;
         private TasksController _controller;
 
         [SetUp]
         public void Setup()
         {
             _mockTaskRepository = new Mock<ITaskRepository>();
-            _controller = new TasksController(_mockTaskRepository.Object);
+            _mockTaskLogger = new Mock<ILogger<TasksController>>();
+            _controller = new TasksController(_mockTaskRepository.Object, _mockTaskLogger.Object);
         }
 
         [Test]

@@ -15,14 +15,16 @@ namespace TaskTrackerAPI.Tests
     {
         private Mock<IUserRepository> _mockUserRepository;
         private Mock<IJwtTokenService> _mockJwtTokenService;
+        private Mock<ILogger<UserController>> _mockUserLogger;
         private UserController _controller;
 
         [SetUp]
         public void Setup()
         {
+            _mockUserLogger = new Mock<ILogger<UserController>>();
             _mockUserRepository = new Mock<IUserRepository>();
             _mockJwtTokenService = new Mock<IJwtTokenService>();
-            _controller = new UserController(_mockUserRepository.Object, _mockJwtTokenService.Object);
+            _controller = new UserController(_mockUserRepository.Object, _mockJwtTokenService.Object, _mockUserLogger.Object);
         }
 
         [Test]
