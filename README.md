@@ -1,90 +1,90 @@
 # 🚀 TaskTrackerAPI
 
-TaskTrackerAPI — это мощный и удобный **RESTful API**, предназначенный для управления задачами. Проект создан на основе **ASP.NET Core**, поддерживает регистрацию и авторизацию пользователей через **JWT**, и предоставляет пользователям возможность отслеживать свои задачи с привязкой к аккаунтам.
+TaskTrackerAPI is a powerful and user-friendly **RESTful API** designed for task management. Built with **ASP.NET Core**, it supports user registration and authentication via **JWT** and allows users to track their tasks linked to specific accounts.
 
-## ✨ Основные возможности
+## ✨ Key Features
 
-- 📋 **Управление задачами**: создание, обновление, удаление и завершение задач.
-- 🔑 **Авторизация и регистрация пользователей**: регистрация новых пользователей, аутентификация через JWT-токены.
-- 🧑‍💼 **Привязка задач к пользователям**: задачи привязываются к конкретным пользователям, что обеспечивает удобное отслеживание.
+- 📋 **Task Management**: Create, update, delete, and complete tasks.
+- 🔑 **User Authentication and Registration**: Register new users, authenticate via JWT tokens.
+- 🧑‍💼 **Task Assignment to Users**: Tasks are assigned to specific users, making tracking more convenient.
 
-## 🛠️ Стек технологий
+## 🛠️ Tech Stack
 
-- **ASP.NET Core 8.0** — основа API.
-- **Entity Framework Core** — ORM для работы с базой данных.
-- **Docker** — контейнеризация для простоты развертывания.
-- **JWT** — для аутентификации и авторизации.
-- **nUnit** — для тестирования проекта.
+- **ASP.NET Core 8.0** — API backbone.
+- **Entity Framework Core** — ORM for database management.
+- **Docker** — containerization for easy deployment.
+- **JWT** — for authentication and authorization.
+- **nUnit** — for project testing.
 
-## 🚀 Быстрый старт
+## 🚀 Getting Started
 
-### 🔧 Локальная установка
+### 🔧 Local Setup
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 
     ```bash
     git clone https://github.com/sollq/task-tracker-api.git
     cd TaskTrackerAPI
     ```
 
-2. Восстановите зависимости и соберите проект:
+2. Restore dependencies and build the project:
 
     ```bash
     dotnet restore
     dotnet build
     ```
 
-3. Запустите проект:
+3. Run the project:
 
     ```bash
     dotnet run
     ```
 
-### 🐳 Запуск через Docker
+### 🐳 Running with Docker
 
-1. Соберите Docker-образ:
+1. Build the Docker image:
 
     ```bash
     docker build -t tasktrackerapi .
     ```
 
-2. Запустите контейнер:
+2. Run the container:
 
     ```bash
     docker run -p 8080:8080 tasktrackerapi
     ```
 
-### ✅ Тестирование
+### ✅ Testing
 
-Проект использует **nUnit** для тестирования. Запустите тесты с помощью команды:
+The project uses **nUnit** for testing. Run the tests with:
 
 ```bash
 dotnet test
 ```
 
-## 📚 API эндпоинты
+## 📚 API Endpoints
 
-### Задачи
+### Tasks
 
-| Метод   | Эндпоинт                       | Описание                                |
-|---------|---------------------------------|-----------------------------------------|
-| `GET`   | `/api/tasks/taskFor/{username}` | Получить все задачи пользователя        |
-| `GET`   | `/api/tasks/taskFor/{id:int}`   | Получить задачу по её ID                |
-| `POST`  | `/api/tasks`                   | Создать новую задачу                    |
-| `PUT`   | `/api/tasks/{id:int}`           | Обновить задачу по её ID                |
-| `PUT`   | `/api/tasks/complete/{id:int}`  | Завершить задачу по её ID               |
-| `DELETE`| `/api/tasks/{id:int}`           | Удалить задачу по её ID                 |
+| Method  | Endpoint                        | Description                             |
+|---------|----------------------------------|-----------------------------------------|
+| `GET`   | `/api/tasks/taskFor/{username}`  | Get all tasks for a user                |
+| `GET`   | `/api/tasks/taskFor/{id:int}`    | Get a task by its ID                    |
+| `POST`  | `/api/tasks`                    | Create a new task                       |
+| `PUT`   | `/api/tasks/{id:int}`            | Update a task by its ID                 |
+| `PUT`   | `/api/tasks/complete/{id:int}`   | Complete a task by its ID               |
+| `DELETE`| `/api/tasks/{id:int}`            | Delete a task by its ID                 |
 
-### Пользователи
+### Users
 
-| Метод   | Эндпоинт                 | Описание                                |
+| Method  | Endpoint                 | Description                             |
 |---------|--------------------------|-----------------------------------------|
-| `POST`  | `/api/user/register`      | Регистрация нового пользователя         |
-| `POST`  | `/api/user/login`         | Аутентификация пользователя             |
+| `POST`  | `/api/user/register`      | Register a new user                     |
+| `POST`  | `/api/user/login`         | User authentication                     |
 
-## ⚙️ CI/CD с Docker
+## ⚙️ CI/CD with Docker
 
-Проект автоматически собирается и деплоится с помощью **GitHub Actions** при пуше изменений в ветку `master`. Вот пример workflow:
+The project is automatically built and deployed via **GitHub Actions** upon pushing changes to the `master` branch. Here’s an example workflow:
 
 ```yaml
 name: Docker Image CI
@@ -104,16 +104,16 @@ jobs:
       run: docker build . --file Dockerfile --tag tasktrackerapi:$(date +%s)
 ```
 
-## 🛠️ Сборка Docker-образов
+## 🛠️ Docker Image Builds
 
-- Использование Docker позволяет удобно развертывать и поддерживать проект в контейнерах.
-- Контейнеризируйте приложение для любых окружений с минимальными усилиями.
+- Using Docker ensures easy deployment and maintenance of the project in containers.
+- Containerize the app for any environment with minimal effort.
 
-## 📞 Контакты
+## 📞 Contact
 
-Если у вас возникли вопросы или предложения по проекту, вы можете связаться со мной через Telegram:  
+If you have any questions or suggestions about the project, feel free to contact me via Telegram:  
 [![Telegram](https://img.shields.io/badge/Telegram-Contact-blue)](https://t.me/xsisd)
 
 ---
 
-Спасибо, что прочитали! Я стремлюсь сделать данный проект всё лучше, поэтому буду рад обратной связи.
+Thanks for reading! I'm constantly working to improve this project and would love your feedback.
