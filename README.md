@@ -9,8 +9,9 @@ TaskTrackerAPI is a powerful and user-friendly **RESTful API** designed for task
 - 📋 **Task Management**: Create, update, delete, and complete tasks.
 - 🔑 **User Authentication and Registration**: Register new users, authenticate via JWT tokens.
 - 🧑‍💼 **Task Assignment to Users**: Tasks are assigned to specific users, making tracking more convenient.
-- 🔄 **Automatic Database Migrations**: On application startup, the API automatically applies any pending migrations to the database, ensuring it is always up-to-date.
 - 🪶 **Logging:** Comprehensive logging capabilities using Serilog, enabling efficient monitoring and troubleshooting of application behavior.
+- 🔄 **Automatic Database Migrations**: On application startup, the API automatically applies any pending migrations to the database, ensuring it is always up-to-date.
+
 
 ## 🛠️ Tech Stack
 
