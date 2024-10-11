@@ -1,3 +1,5 @@
+---
+
 # 🚀 TaskTrackerAPI
 
 TaskTrackerAPI is a powerful and user-friendly **RESTful API** designed for task management. Built with **ASP.NET Core**, it supports user registration and authentication via **JWT** and allows users to track their tasks linked to specific accounts.
@@ -7,6 +9,9 @@ TaskTrackerAPI is a powerful and user-friendly **RESTful API** designed for task
 - 📋 **Task Management**: Create, update, delete, and complete tasks.
 - 🔑 **User Authentication and Registration**: Register new users, authenticate via JWT tokens.
 - 🧑‍💼 **Task Assignment to Users**: Tasks are assigned to specific users, making tracking more convenient.
+- 🪶 **Logging:** Comprehensive logging capabilities using Serilog, enabling efficient monitoring and troubleshooting of application behavior.
+- 🔄 **Automatic Database Migrations**: On application startup, the API automatically applies any pending migrations to the database, ensuring it is always up-to-date.
+
 
 ## 🛠️ Tech Stack
 
@@ -112,8 +117,11 @@ jobs:
 ## 📞 Contact
 
 If you have any questions or suggestions about the project, feel free to contact me via Telegram:  
+
 [![Telegram](https://img.shields.io/badge/Telegram-Contact-blue)](https://t.me/xsisd)
 
 ---
 
 Thanks for reading! I'm constantly working to improve this project and would love your feedback.
+
+---
