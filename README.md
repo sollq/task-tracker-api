@@ -28,7 +28,7 @@ TaskTrackerAPI is a powerful and user-friendly **RESTful API** designed for task
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/sollq/task-tracker-api.git
+    git clone https://github.com/sollq/TaskTrackerAPI.git
     cd TaskTrackerAPI
     ```
 
